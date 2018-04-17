@@ -22,4 +22,5 @@ deriveSimpleBiCxt [t|HasConfiguration|] ''DlgUndo [
 
 instance HasConfiguration => Bi (DataMsg ProxySKHeavy) where
     encode = encode . dmContents
+    encodedSize = encodedSize . dmContents
     decode = DataMsg <$> decode
